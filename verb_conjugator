@@ -1,0 +1,212 @@
+def CONJUGATE():
+    inf_verb = input("Enter an infinitive verb: ")
+    stem = inf_verb[:-2]
+    print("The stem for your verb is:", stem)
+    verb_subject = input("Enter intended person for verb: (yo/tú/él,ella,usted/nosotros,nosotras/ellos,ellas,ustedes): ")
+    if inf_verb in "ser":
+        if verb_subject in "yo":        # SER YO FORM
+            print("Yo soy")
+        elif verb_subject in "tú, tu":      # SER TÚ FORM
+            print("Tú eres")
+        elif verb_subject in "él, el, ella, usted":     # SER ÉL,ELLA,USTED FORM
+            if verb_subject in "él, el":
+                print("Él es")
+            elif verb_subject in "ella":
+                print("Ella es")
+            elif verb_subject in "usted":
+                print("Usted es")
+        elif verb_subject in "n, nosotros, nosotras":       # SER NOSOTROS,NOSOTRAS FORM
+            if verb_subject in "nosotros":
+                print("Nosotros somos")
+            elif verb_subject in "nosotras":
+                print("Nosotras somos")
+        elif verb_subject in "ellos, ellas, ustedes":
+            if verb_subject in "ellos":
+                print("Ellos son")
+            elif verb_subject in "ellas":
+                print("Ellas son")
+            elif verb_subject in "ustedes":
+                print("Ustedes son")
+    elif inf_verb in "ir":
+        if verb_subject in "yo":        # IR YO FORM
+            print("Yo voy")
+        elif verb_subject in "tú, tu":      # IR TÚ FORM
+            print("Tú vas")
+        elif verb_subject in "él, el, ella, usted":     # IR ÉL,ELLA,USTED FORM
+            if verb_subject in "él, el":
+                print("Él va")
+            elif verb_subject in "ella":
+                print("Ella va")
+            elif verb_subject in "usted":
+                print("Usted va")
+        elif verb_subject in "n, nosotros, nosotras":       # IR NOSOTROS,NOSOTRAS FORM
+            if verb_subject in "nosotros":
+                print("Nosotros vamos")
+            elif verb_subject in "nosotras":
+                print("Nosotras vamos")
+        elif verb_subject in "ellos, ellas, ustedes":       # IR ELLOS,ELLAS,USTEDES FORM
+            if verb_subject in "ellos":
+                print("Ellos van")
+            elif verb_subject in "ellas":
+                print("Ellas van")
+            elif verb_subject in "ustedes":
+                print("Ustedes van")
+    elif inf_verb in "poder":
+        if verb_subject in "yo":        # PODER YO FORM
+            print("Yo puedo")
+        elif verb_subject in "tú, tu":      # PODER TÚ FORM
+            print("Tú puedes")
+        elif verb_subject in "él, el, ella, usted":     # PODER ÉL,ELLA,USTED FORM
+            if verb_subject in "él, el":
+                print("Él puede")
+            elif verb_subject in "ella":
+                print("Ella puede")
+            elif verb_subject in "usted":
+                print("Usted puede")
+        elif verb_subject in "n, nosotros, nosotras":       # PODER NOSOTROS,NOSOTRAS FORM
+            if verb_subject in "nosotros":
+                print("Nosotros podemos")
+            elif verb_subject in "nosotras":
+                print("Nosotras podemos")
+        elif verb_subject in "ellos, ellas, ustedes":       # PODER ELLOS,ELLAS,USTEDES FORM
+            if verb_subject in "ellos":
+                print("Ellos pueden")
+            elif verb_subject in "ellas":
+                print("Ellas pueden")
+            elif verb_subject in "ustedes":
+                print("Ustedes pueden")
+    elif inf_verb in "pedir":
+        if verb_subject in "yo":        # PEDIR YO FORM
+            print("Yo pido")
+        elif verb_subject in "tú, tu":      # PEDIR TÚ FORM
+            print("Tú pides")
+        elif verb_subject in "él, el, ella, usted":     # PEDIR ÉL,ELLA,USTED FORM
+            if verb_subject in "él, el":
+                print("Él pide")
+            elif verb_subject in "ella":
+                print("Ella pide")
+            elif verb_subject in "usted":
+                print("Usted pide")
+        elif verb_subject in "n, nosotros, nosotras":       # PEDIR NOSOTROS,NOSOTRAS FORM
+            if verb_subject in "nosotros":
+                print("Nosotros pedimos")
+            elif verb_subject in "nosotras":
+                print("Nosotras pedimos")
+        elif verb_subject in "ellos, ellas, ustedes":       # PEDIR ELLOS,ELLAS,USTEDES FORM
+            if verb_subject in "ellos":
+                print("Ellos piden")
+            elif verb_subject in "ellas":
+                print("Ellas piden")
+            elif verb_subject in "ustedes":
+                print("Ustedes piden")
+    elif verb_subject in "yo" and inf_verb.endswith("ar"):        # YO FORM : AR
+        stem = inf_verb[:-2]
+        conj_verb = stem + "o"
+        print ("Yo", conj_verb)
+    elif verb_subject in "tú, tu" and inf_verb.endswith("ar"):      # TÚ FORM : AR
+        stem = inf_verb[:-2]
+        conj_verb = stem + "as"
+        print ("Tú", conj_verb)
+    elif verb_subject in "él, el, ella, usted" and inf_verb.endswith("ar"):        # ÉL,ELLA,USTED FORM : AR
+        stem = inf_verb[:-2]
+        conj_verb = stem + "a"
+        if verb_subject in "él, el":
+            print ("Él", conj_verb)
+        elif verb_subject in "ella":
+            print ("Ella", conj_verb)
+        elif verb_subject in "usted":
+            print ("Usted", conj_verb)
+    elif verb_subject in "n, nosotros, nosotras" and inf_verb.endswith("ar"):       # NOSOTROS,NOSOTRAS FORM : AR
+        stem = inf_verb[:-2]
+        conj_verb = stem + "amos"
+        if verb_subject in "nosotros":
+            print ("Nosotros", conj_verb)
+        elif verb_subject in "nosotras":
+            print ("Nosotras", conj_verb)
+    elif verb_subject in "ellos, ellas, ustedes" and inf_verb.endswith("ar"):        # ELLOS,ELLAS,USTEDES FORM : AR
+        stem = inf_verb[:-2]
+        conj_verb = stem + "an"
+        if verb_subject in "ellos":
+            print ("Ellos", conj_verb)
+        elif verb_subject in "ellas":
+            print ("Ellas", conj_verb)
+        elif verb_subject in "ustedes":
+            print ("Ustedes", conj_verb)
+    elif verb_subject in "yo" and inf_verb.endswith("er"):      # YO FORM : ER
+        stem = inf_verb[:-2]
+        conj_verb = stem + "o"
+        print ("Yo", conj_verb)
+    elif verb_subject in "tú, tu" and inf_verb.endswith("er"):      # TÚ FORM : ER
+        stem = inf_verb[:-2]
+        conj_verb = stem + "es"
+        print ("Tú", conj_verb)
+    elif verb_subject in "él, el, ella, usted" and inf_verb.endswith("er"):     # ÉL,ELLA,USTED FORM : ER
+        stem = inf_verb[:-2]
+        conj_verb = stem + "e"
+        if verb_subject in "él, el":
+            print ("Él", conj_verb)
+        elif verb_subject in "ella":
+            print ("Ella", conj_verb)
+        elif verb_subject in "usted":
+            print ("Usted", conj_verb)
+    elif verb_subject in "n, nosotros, nosotras" and inf_verb.endswith("er"):       # NOSOTROS,NOSOTRAS FORM : ER
+        stem = inf_verb[:-2]
+        conj_verb = stem + "emos"
+        if verb_subject in "nosotros":
+            print ("Nosotros", conj_verb)
+        elif verb_subject in "nosotras":
+            print ("Nosotras", conj_verb)
+    elif verb_subject in "ellos, ellas, ustedes" and inf_verb.endswith("er"):       # ELLOS,ELLAS,USTEDES FORM : ER
+        stem = inf_verb[:-2]
+        conj_verb = stem + "en"
+        if verb_subject in "ellos":
+            print ("Ellos", conj_verb)
+        elif verb_subject in "ellas":
+            print ("Ellas", conj_verb)
+        elif verb_subject in "ustedes":
+            print ("Ustedes", conj_verb)
+    elif verb_subject in "yo" and inf_verb.endswith("ir"):      # YO FORM : IR
+        stem = inf_verb[:-2]
+        conj_verb = stem + "o"
+        print ("Yo", conj_verb)
+    elif verb_subject in "tú, tu" and inf_verb.endswith("ir"):      # TÚ FORM : IR
+        stem = inf_verb[:-2]
+        conj_verb = stem + "es"
+        print ("Tú", conj_verb)
+    elif verb_subject in "él, el, ella, usted" and inf_verb.endswith("ir"):     # ÉL,ELLA,USTED FORM : IR
+        stem = inf_verb[:-2]
+        conj_verb = stem + "e"
+        if verb_subject in "él, el":
+            print ("Él", conj_verb)
+        elif verb_subject in "ella":
+            print ("Ella", conj_verb)
+        elif verb_subject in "usted":
+            print ("Usted", conj_verb)
+    elif verb_subject in "n, nosotros, nosotras" and inf_verb.endswith("ir"):       # NOSOTROS,NOSOTRAS FORM : IR
+        stem = inf_verb[:-2]
+        conj_verb = stem + "imos"
+        if verb_subject in "nosotros":
+            print ("Nosotros", conj_verb)
+        elif verb_subject in "nosotras":
+            print ("Nosotras", conj_verb)
+    elif verb_subject in "ellos, ellas, ustedes" and inf_verb.endswith("ir"):       # ELLOS,ELLAS,USTEDES FORM : IR
+        stem = inf_verb[:-2]
+        conj_verb = stem + "en"
+        if verb_subject in "ellos":
+            print ("Ellos", conj_verb)
+        elif verb_subject in "ellas":
+            print ("Ellas", conj_verb)
+        elif verb_subject in "ustedes":
+            print ("Ustedes", conj_verb)
+
+
+CONJUGATE()
+
+while True:
+    more_conjug = input("Do you want to conjugate another verb? (y/n): ")
+    if more_conjug in ["Y", "y", "Yes", "yes"]:
+        CONJUGATE()
+    elif more_conjug in ["N", "n", "No", "no"]:
+        break
+    else:
+        break
